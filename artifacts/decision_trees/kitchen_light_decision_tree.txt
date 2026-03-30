@@ -1,0 +1,228 @@
+Device: kitchen_light
+Training-set accuracy: 0.9886
+Positive rate in distilled labels: 0.2533
+Tree depth: 8
+Leaf count: 55
+
+Structured tree text:
+|--- kitchen_light_current <= 0.500
+|   |--- time_of_day <= 0.005
+|   |   |--- day_of_week <= 0.583
+|   |   |   |--- class: 0
+|   |   |--- day_of_week >  0.583
+|   |   |   |--- class: 1
+|   |--- time_of_day >  0.005
+|   |   |--- light_level <= 0.364
+|   |   |   |--- living_room_light_current <= 0.500
+|   |   |   |   |--- day_of_week <= 0.750
+|   |   |   |   |   |--- bedroom_light_current <= 0.500
+|   |   |   |   |   |   |--- is_home <= 0.500
+|   |   |   |   |   |   |   |--- class: 0
+|   |   |   |   |   |   |--- is_home >  0.500
+|   |   |   |   |   |   |   |--- time_of_day <= 0.802
+|   |   |   |   |   |   |   |   |--- class: 1
+|   |   |   |   |   |   |   |--- time_of_day >  0.802
+|   |   |   |   |   |   |   |   |--- class: 0
+|   |   |   |   |   |--- bedroom_light_current >  0.500
+|   |   |   |   |   |   |--- time_of_day <= 0.203
+|   |   |   |   |   |   |   |--- time_of_day <= 0.182
+|   |   |   |   |   |   |   |   |--- class: 0
+|   |   |   |   |   |   |   |--- time_of_day >  0.182
+|   |   |   |   |   |   |   |   |--- class: 0
+|   |   |   |   |   |   |--- time_of_day >  0.203
+|   |   |   |   |   |   |   |--- class: 0
+|   |   |   |   |--- day_of_week >  0.750
+|   |   |   |   |   |--- time_of_day <= 0.297
+|   |   |   |   |   |   |--- day_of_week <= 0.917
+|   |   |   |   |   |   |   |--- class: 0
+|   |   |   |   |   |   |--- day_of_week >  0.917
+|   |   |   |   |   |   |   |--- class: 0
+|   |   |   |   |   |--- time_of_day >  0.297
+|   |   |   |   |   |   |--- bedroom_light_current <= 0.500
+|   |   |   |   |   |   |   |--- light_level <= 0.266
+|   |   |   |   |   |   |   |   |--- class: 0
+|   |   |   |   |   |   |   |--- light_level >  0.266
+|   |   |   |   |   |   |   |   |--- class: 0
+|   |   |   |   |   |   |--- bedroom_light_current >  0.500
+|   |   |   |   |   |   |   |--- time_of_day <= 0.974
+|   |   |   |   |   |   |   |   |--- class: 1
+|   |   |   |   |   |   |   |--- time_of_day >  0.974
+|   |   |   |   |   |   |   |   |--- class: 0
+|   |   |   |--- living_room_light_current >  0.500
+|   |   |   |   |--- time_of_day <= 0.943
+|   |   |   |   |   |--- time_of_day <= 0.724
+|   |   |   |   |   |   |--- light_level <= 0.060
+|   |   |   |   |   |   |   |--- class: 0
+|   |   |   |   |   |   |--- light_level >  0.060
+|   |   |   |   |   |   |   |--- class: 0
+|   |   |   |   |   |--- time_of_day >  0.724
+|   |   |   |   |   |   |--- class: 0
+|   |   |   |   |--- time_of_day >  0.943
+|   |   |   |   |   |--- light_level <= 0.015
+|   |   |   |   |   |   |--- class: 1
+|   |   |   |   |   |--- light_level >  0.015
+|   |   |   |   |   |   |--- class: 0
+|   |   |--- light_level >  0.364
+|   |   |   |--- time_of_day <= 0.682
+|   |   |   |   |--- time_of_day <= 0.661
+|   |   |   |   |   |--- class: 0
+|   |   |   |   |--- time_of_day >  0.661
+|   |   |   |   |   |--- is_home <= 0.500
+|   |   |   |   |   |   |--- class: 0
+|   |   |   |   |   |--- is_home >  0.500
+|   |   |   |   |   |   |--- living_room_light_current <= 0.500
+|   |   |   |   |   |   |   |--- class: 0
+|   |   |   |   |   |   |--- living_room_light_current >  0.500
+|   |   |   |   |   |   |   |--- class: 0
+|   |   |   |--- time_of_day >  0.682
+|   |   |   |   |--- is_home <= 0.500
+|   |   |   |   |   |--- class: 0
+|   |   |   |   |--- is_home >  0.500
+|   |   |   |   |   |--- class: 0
+|--- kitchen_light_current >  0.500
+|   |--- is_home <= 0.500
+|   |   |--- class: 0
+|   |--- is_home >  0.500
+|   |   |--- time_of_day <= 0.766
+|   |   |   |--- light_level <= 0.369
+|   |   |   |   |--- day_of_week <= 0.583
+|   |   |   |   |   |--- class: 1
+|   |   |   |   |--- day_of_week >  0.583
+|   |   |   |   |   |--- time_of_day <= 0.745
+|   |   |   |   |   |   |--- time_of_day <= 0.172
+|   |   |   |   |   |   |   |--- light_level <= 0.053
+|   |   |   |   |   |   |   |   |--- class: 1
+|   |   |   |   |   |   |   |--- light_level >  0.053
+|   |   |   |   |   |   |   |   |--- class: 1
+|   |   |   |   |   |   |--- time_of_day >  0.172
+|   |   |   |   |   |   |   |--- day_of_week <= 0.917
+|   |   |   |   |   |   |   |   |--- class: 1
+|   |   |   |   |   |   |   |--- day_of_week >  0.917
+|   |   |   |   |   |   |   |   |--- class: 1
+|   |   |   |   |   |--- time_of_day >  0.745
+|   |   |   |   |   |   |--- class: 0
+|   |   |   |--- light_level >  0.369
+|   |   |   |   |--- light_level <= 0.434
+|   |   |   |   |   |--- day_of_week <= 0.917
+|   |   |   |   |   |   |--- light_level <= 0.386
+|   |   |   |   |   |   |   |--- class: 0
+|   |   |   |   |   |   |--- light_level >  0.386
+|   |   |   |   |   |   |   |--- class: 0
+|   |   |   |   |   |--- day_of_week >  0.917
+|   |   |   |   |   |   |--- time_of_day <= 0.349
+|   |   |   |   |   |   |   |--- class: 1
+|   |   |   |   |   |   |--- time_of_day >  0.349
+|   |   |   |   |   |   |   |--- light_level <= 0.405
+|   |   |   |   |   |   |   |   |--- class: 1
+|   |   |   |   |   |   |   |--- light_level >  0.405
+|   |   |   |   |   |   |   |   |--- class: 1
+|   |   |   |   |--- light_level >  0.434
+|   |   |   |   |   |--- light_level <= 0.462
+|   |   |   |   |   |   |--- class: 0
+|   |   |   |   |   |--- light_level >  0.462
+|   |   |   |   |   |   |--- class: 0
+|   |   |--- time_of_day >  0.766
+|   |   |   |--- bedroom_light_current <= 0.500
+|   |   |   |   |--- light_level <= 0.001
+|   |   |   |   |   |--- day_of_week <= 0.250
+|   |   |   |   |   |   |--- class: 0
+|   |   |   |   |   |--- day_of_week >  0.250
+|   |   |   |   |   |   |--- time_of_day <= 0.776
+|   |   |   |   |   |   |   |--- day_of_week <= 0.417
+|   |   |   |   |   |   |   |   |--- class: 1
+|   |   |   |   |   |   |   |--- day_of_week >  0.417
+|   |   |   |   |   |   |   |   |--- class: 0
+|   |   |   |   |   |   |--- time_of_day >  0.776
+|   |   |   |   |   |   |   |--- class: 0
+|   |   |   |   |--- light_level >  0.001
+|   |   |   |   |   |--- day_of_week <= 0.083
+|   |   |   |   |   |   |--- light_level <= 0.029
+|   |   |   |   |   |   |   |--- class: 0
+|   |   |   |   |   |   |--- light_level >  0.029
+|   |   |   |   |   |   |   |--- class: 0
+|   |   |   |   |   |--- day_of_week >  0.083
+|   |   |   |   |   |   |--- time_of_day <= 0.776
+|   |   |   |   |   |   |   |--- day_of_week <= 0.417
+|   |   |   |   |   |   |   |   |--- class: 1
+|   |   |   |   |   |   |   |--- day_of_week >  0.417
+|   |   |   |   |   |   |   |   |--- class: 0
+|   |   |   |   |   |   |--- time_of_day >  0.776
+|   |   |   |   |   |   |   |--- light_level <= 0.015
+|   |   |   |   |   |   |   |   |--- class: 0
+|   |   |   |   |   |   |   |--- light_level >  0.015
+|   |   |   |   |   |   |   |   |--- class: 1
+|   |   |   |--- bedroom_light_current >  0.500
+|   |   |   |   |--- light_level <= 0.022
+|   |   |   |   |   |--- light_level <= 0.007
+|   |   |   |   |   |   |--- class: 1
+|   |   |   |   |   |--- light_level >  0.007
+|   |   |   |   |   |   |--- time_of_day <= 0.984
+|   |   |   |   |   |   |   |--- class: 1
+|   |   |   |   |   |   |--- time_of_day >  0.984
+|   |   |   |   |   |   |   |--- class: 1
+|   |   |   |   |--- light_level >  0.022
+|   |   |   |   |   |--- day_of_week <= 0.917
+|   |   |   |   |   |   |--- time_of_day <= 0.974
+|   |   |   |   |   |   |   |--- class: 1
+|   |   |   |   |   |   |--- time_of_day >  0.974
+|   |   |   |   |   |   |   |--- class: 0
+|   |   |   |   |   |--- day_of_week >  0.917
+|   |   |   |   |   |   |--- class: 1
+
+
+Natural-language rules:
+If current kitchen light state <= on / home and time of day <= 00:08 and day of week <= Friday, then turn off kitchen_light. sample_count=1
+If current kitchen light state <= on / home and time of day <= 00:08 and day of week > Friday, then turn on kitchen_light. sample_count=1
+If current kitchen light state <= on / home and time of day > 00:08 and ambient light level <= 0.364 and current living room light state <= on / home and day of week <= Friday and current bedroom light state <= on / home and occupancy state <= on / home, then turn off kitchen_light. sample_count=1
+If current kitchen light state <= on / home and time of day > 00:08 and ambient light level <= 0.364 and current living room light state <= on / home and day of week <= Friday and current bedroom light state <= on / home and occupancy state > on / home and time of day <= 19:15, then turn on kitchen_light. sample_count=1
+If current kitchen light state <= on / home and time of day > 00:08 and ambient light level <= 0.364 and current living room light state <= on / home and day of week <= Friday and current bedroom light state <= on / home and occupancy state > on / home and time of day > 19:15, then turn off kitchen_light. sample_count=1
+If current kitchen light state <= on / home and time of day > 00:08 and ambient light level <= 0.364 and current living room light state <= on / home and day of week <= Friday and current bedroom light state > on / home and time of day <= 04:52 and time of day <= 04:22, then turn off kitchen_light. sample_count=1
+If current kitchen light state <= on / home and time of day > 00:08 and ambient light level <= 0.364 and current living room light state <= on / home and day of week <= Friday and current bedroom light state > on / home and time of day <= 04:52 and time of day > 04:22, then turn off kitchen_light. sample_count=1
+If current kitchen light state <= on / home and time of day > 00:08 and ambient light level <= 0.364 and current living room light state <= on / home and day of week <= Friday and current bedroom light state > on / home and time of day > 04:52, then turn off kitchen_light. sample_count=1
+If current kitchen light state <= on / home and time of day > 00:08 and ambient light level <= 0.364 and current living room light state <= on / home and day of week > Friday and time of day <= 07:08 and day of week <= Saturday, then turn off kitchen_light. sample_count=1
+If current kitchen light state <= on / home and time of day > 00:08 and ambient light level <= 0.364 and current living room light state <= on / home and day of week > Friday and time of day <= 07:08 and day of week > Saturday, then turn off kitchen_light. sample_count=1
+If current kitchen light state <= on / home and time of day > 00:08 and ambient light level <= 0.364 and current living room light state <= on / home and day of week > Friday and time of day > 07:08 and current bedroom light state <= on / home and ambient light level <= 0.266, then turn off kitchen_light. sample_count=1
+If current kitchen light state <= on / home and time of day > 00:08 and ambient light level <= 0.364 and current living room light state <= on / home and day of week > Friday and time of day > 07:08 and current bedroom light state <= on / home and ambient light level > 0.266, then turn off kitchen_light. sample_count=1
+If current kitchen light state <= on / home and time of day > 00:08 and ambient light level <= 0.364 and current living room light state <= on / home and day of week > Friday and time of day > 07:08 and current bedroom light state > on / home and time of day <= 23:23, then turn on kitchen_light. sample_count=1
+If current kitchen light state <= on / home and time of day > 00:08 and ambient light level <= 0.364 and current living room light state <= on / home and day of week > Friday and time of day > 07:08 and current bedroom light state > on / home and time of day > 23:23, then turn off kitchen_light. sample_count=1
+If current kitchen light state <= on / home and time of day > 00:08 and ambient light level <= 0.364 and current living room light state > on / home and time of day <= 22:38 and time of day <= 17:23 and ambient light level <= 0.060, then turn off kitchen_light. sample_count=1
+If current kitchen light state <= on / home and time of day > 00:08 and ambient light level <= 0.364 and current living room light state > on / home and time of day <= 22:38 and time of day <= 17:23 and ambient light level > 0.060, then turn off kitchen_light. sample_count=1
+If current kitchen light state <= on / home and time of day > 00:08 and ambient light level <= 0.364 and current living room light state > on / home and time of day <= 22:38 and time of day > 17:23, then turn off kitchen_light. sample_count=1
+If current kitchen light state <= on / home and time of day > 00:08 and ambient light level <= 0.364 and current living room light state > on / home and time of day > 22:38 and ambient light level <= 0.015, then turn on kitchen_light. sample_count=1
+If current kitchen light state <= on / home and time of day > 00:08 and ambient light level <= 0.364 and current living room light state > on / home and time of day > 22:38 and ambient light level > 0.015, then turn off kitchen_light. sample_count=1
+If current kitchen light state <= on / home and time of day > 00:08 and ambient light level > 0.364 and time of day <= 16:22 and time of day <= 15:53, then turn off kitchen_light. sample_count=1
+If current kitchen light state <= on / home and time of day > 00:08 and ambient light level > 0.364 and time of day <= 16:22 and time of day > 15:53 and occupancy state <= on / home, then turn off kitchen_light. sample_count=1
+If current kitchen light state <= on / home and time of day > 00:08 and ambient light level > 0.364 and time of day <= 16:22 and time of day > 15:53 and occupancy state > on / home and current living room light state <= on / home, then turn off kitchen_light. sample_count=1
+If current kitchen light state <= on / home and time of day > 00:08 and ambient light level > 0.364 and time of day <= 16:22 and time of day > 15:53 and occupancy state > on / home and current living room light state > on / home, then turn off kitchen_light. sample_count=1
+If current kitchen light state <= on / home and time of day > 00:08 and ambient light level > 0.364 and time of day > 16:22 and occupancy state <= on / home, then turn off kitchen_light. sample_count=1
+If current kitchen light state <= on / home and time of day > 00:08 and ambient light level > 0.364 and time of day > 16:22 and occupancy state > on / home, then turn off kitchen_light. sample_count=1
+If current kitchen light state > on / home and occupancy state <= on / home, then turn off kitchen_light. sample_count=1
+If current kitchen light state > on / home and occupancy state > on / home and time of day <= 18:22 and ambient light level <= 0.369 and day of week <= Friday, then turn on kitchen_light. sample_count=1
+If current kitchen light state > on / home and occupancy state > on / home and time of day <= 18:22 and ambient light level <= 0.369 and day of week > Friday and time of day <= 17:52 and time of day <= 04:08 and ambient light level <= 0.053, then turn on kitchen_light. sample_count=1
+If current kitchen light state > on / home and occupancy state > on / home and time of day <= 18:22 and ambient light level <= 0.369 and day of week > Friday and time of day <= 17:52 and time of day <= 04:08 and ambient light level > 0.053, then turn on kitchen_light. sample_count=1
+If current kitchen light state > on / home and occupancy state > on / home and time of day <= 18:22 and ambient light level <= 0.369 and day of week > Friday and time of day <= 17:52 and time of day > 04:08 and day of week <= Saturday, then turn on kitchen_light. sample_count=1
+If current kitchen light state > on / home and occupancy state > on / home and time of day <= 18:22 and ambient light level <= 0.369 and day of week > Friday and time of day <= 17:52 and time of day > 04:08 and day of week > Saturday, then turn on kitchen_light. sample_count=1
+If current kitchen light state > on / home and occupancy state > on / home and time of day <= 18:22 and ambient light level <= 0.369 and day of week > Friday and time of day > 17:52, then turn off kitchen_light. sample_count=1
+If current kitchen light state > on / home and occupancy state > on / home and time of day <= 18:22 and ambient light level > 0.369 and ambient light level <= 0.434 and day of week <= Saturday and ambient light level <= 0.386, then turn off kitchen_light. sample_count=1
+If current kitchen light state > on / home and occupancy state > on / home and time of day <= 18:22 and ambient light level > 0.369 and ambient light level <= 0.434 and day of week <= Saturday and ambient light level > 0.386, then turn off kitchen_light. sample_count=1
+If current kitchen light state > on / home and occupancy state > on / home and time of day <= 18:22 and ambient light level > 0.369 and ambient light level <= 0.434 and day of week > Saturday and time of day <= 08:22, then turn on kitchen_light. sample_count=1
+If current kitchen light state > on / home and occupancy state > on / home and time of day <= 18:22 and ambient light level > 0.369 and ambient light level <= 0.434 and day of week > Saturday and time of day > 08:22 and ambient light level <= 0.405, then turn on kitchen_light. sample_count=1
+If current kitchen light state > on / home and occupancy state > on / home and time of day <= 18:22 and ambient light level > 0.369 and ambient light level <= 0.434 and day of week > Saturday and time of day > 08:22 and ambient light level > 0.405, then turn on kitchen_light. sample_count=1
+If current kitchen light state > on / home and occupancy state > on / home and time of day <= 18:22 and ambient light level > 0.369 and ambient light level > 0.434 and ambient light level <= 0.462, then turn off kitchen_light. sample_count=1
+If current kitchen light state > on / home and occupancy state > on / home and time of day <= 18:22 and ambient light level > 0.369 and ambient light level > 0.434 and ambient light level > 0.462, then turn off kitchen_light. sample_count=1
+If current kitchen light state > on / home and occupancy state > on / home and time of day > 18:22 and current bedroom light state <= on / home and ambient light level <= 0.001 and day of week <= Wednesday, then turn off kitchen_light. sample_count=1
+If current kitchen light state > on / home and occupancy state > on / home and time of day > 18:22 and current bedroom light state <= on / home and ambient light level <= 0.001 and day of week > Wednesday and time of day <= 18:37 and day of week <= Thursday, then turn on kitchen_light. sample_count=1
+If current kitchen light state > on / home and occupancy state > on / home and time of day > 18:22 and current bedroom light state <= on / home and ambient light level <= 0.001 and day of week > Wednesday and time of day <= 18:37 and day of week > Thursday, then turn off kitchen_light. sample_count=1
+If current kitchen light state > on / home and occupancy state > on / home and time of day > 18:22 and current bedroom light state <= on / home and ambient light level <= 0.001 and day of week > Wednesday and time of day > 18:37, then turn off kitchen_light. sample_count=1
+If current kitchen light state > on / home and occupancy state > on / home and time of day > 18:22 and current bedroom light state <= on / home and ambient light level > 0.001 and day of week <= Tuesday and ambient light level <= 0.029, then turn off kitchen_light. sample_count=1
+If current kitchen light state > on / home and occupancy state > on / home and time of day > 18:22 and current bedroom light state <= on / home and ambient light level > 0.001 and day of week <= Tuesday and ambient light level > 0.029, then turn off kitchen_light. sample_count=1
+If current kitchen light state > on / home and occupancy state > on / home and time of day > 18:22 and current bedroom light state <= on / home and ambient light level > 0.001 and day of week > Tuesday and time of day <= 18:37 and day of week <= Thursday, then turn on kitchen_light. sample_count=1
+If current kitchen light state > on / home and occupancy state > on / home and time of day > 18:22 and current bedroom light state <= on / home and ambient light level > 0.001 and day of week > Tuesday and time of day <= 18:37 and day of week > Thursday, then turn off kitchen_light. sample_count=1
+If current kitchen light state > on / home and occupancy state > on / home and time of day > 18:22 and current bedroom light state <= on / home and ambient light level > 0.001 and day of week > Tuesday and time of day > 18:37 and ambient light level <= 0.015, then turn off kitchen_light. sample_count=1
+If current kitchen light state > on / home and occupancy state > on / home and time of day > 18:22 and current bedroom light state <= on / home and ambient light level > 0.001 and day of week > Tuesday and time of day > 18:37 and ambient light level > 0.015, then turn on kitchen_light. sample_count=1
+If current kitchen light state > on / home and occupancy state > on / home and time of day > 18:22 and current bedroom light state > on / home and ambient light level <= 0.022 and ambient light level <= 0.007, then turn on kitchen_light. sample_count=1
+If current kitchen light state > on / home and occupancy state > on / home and time of day > 18:22 and current bedroom light state > on / home and ambient light level <= 0.022 and ambient light level > 0.007 and time of day <= 23:38, then turn on kitchen_light. sample_count=1
+If current kitchen light state > on / home and occupancy state > on / home and time of day > 18:22 and current bedroom light state > on / home and ambient light level <= 0.022 and ambient light level > 0.007 and time of day > 23:38, then turn on kitchen_light. sample_count=1
+If current kitchen light state > on / home and occupancy state > on / home and time of day > 18:22 and current bedroom light state > on / home and ambient light level > 0.022 and day of week <= Saturday and time of day <= 23:23, then turn on kitchen_light. sample_count=1
+If current kitchen light state > on / home and occupancy state > on / home and time of day > 18:22 and current bedroom light state > on / home and ambient light level > 0.022 and day of week <= Saturday and time of day > 23:23, then turn off kitchen_light. sample_count=1
+If current kitchen light state > on / home and occupancy state > on / home and time of day > 18:22 and current bedroom light state > on / home and ambient light level > 0.022 and day of week > Saturday, then turn on kitchen_light. sample_count=1

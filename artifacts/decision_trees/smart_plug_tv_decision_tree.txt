@@ -1,0 +1,252 @@
+Device: smart_plug_tv
+Training-set accuracy: 0.9976
+Positive rate in distilled labels: 0.1185
+Tree depth: 8
+Leaf count: 61
+
+Structured tree text:
+|--- smart_plug_tv_current <= 0.500
+|   |--- time_of_day <= 0.714
+|   |   |--- time_of_day <= 0.703
+|   |   |   |--- time_of_day <= 0.682
+|   |   |   |   |--- day_of_week <= 0.917
+|   |   |   |   |   |--- class: 0
+|   |   |   |   |--- day_of_week >  0.917
+|   |   |   |   |   |--- bedroom_light_current <= 0.500
+|   |   |   |   |   |   |--- class: 0
+|   |   |   |   |   |--- bedroom_light_current >  0.500
+|   |   |   |   |   |   |--- light_level <= 0.299
+|   |   |   |   |   |   |   |--- class: 0
+|   |   |   |   |   |   |--- light_level >  0.299
+|   |   |   |   |   |   |   |--- class: 0
+|   |   |   |--- time_of_day >  0.682
+|   |   |   |   |--- light_level <= 0.154
+|   |   |   |   |   |--- light_level <= 0.144
+|   |   |   |   |   |   |--- class: 0
+|   |   |   |   |   |--- light_level >  0.144
+|   |   |   |   |   |   |--- class: 0
+|   |   |   |   |--- light_level >  0.154
+|   |   |   |   |   |--- class: 0
+|   |   |--- time_of_day >  0.703
+|   |   |   |--- light_level <= 0.059
+|   |   |   |   |--- class: 0
+|   |   |   |--- light_level >  0.059
+|   |   |   |   |--- kitchen_light_current <= 0.500
+|   |   |   |   |   |--- class: 0
+|   |   |   |   |--- kitchen_light_current >  0.500
+|   |   |   |   |   |--- light_level <= 0.148
+|   |   |   |   |   |   |--- class: 0
+|   |   |   |   |   |--- light_level >  0.148
+|   |   |   |   |   |   |--- class: 0
+|   |--- time_of_day >  0.714
+|   |   |--- time_of_day <= 0.766
+|   |   |   |--- kitchen_light_current <= 0.500
+|   |   |   |   |--- day_of_week <= 0.750
+|   |   |   |   |   |--- light_level <= 0.025
+|   |   |   |   |   |   |--- is_home <= 0.500
+|   |   |   |   |   |   |   |--- class: 0
+|   |   |   |   |   |   |--- is_home >  0.500
+|   |   |   |   |   |   |   |--- time_of_day <= 0.745
+|   |   |   |   |   |   |   |   |--- class: 1
+|   |   |   |   |   |   |   |--- time_of_day >  0.745
+|   |   |   |   |   |   |   |   |--- class: 1
+|   |   |   |   |   |--- light_level >  0.025
+|   |   |   |   |   |   |--- light_level <= 0.048
+|   |   |   |   |   |   |   |--- light_level <= 0.041
+|   |   |   |   |   |   |   |   |--- class: 0
+|   |   |   |   |   |   |   |--- light_level >  0.041
+|   |   |   |   |   |   |   |   |--- class: 0
+|   |   |   |   |   |   |--- light_level >  0.048
+|   |   |   |   |   |   |   |--- time_of_day <= 0.745
+|   |   |   |   |   |   |   |   |--- class: 0
+|   |   |   |   |   |   |   |--- time_of_day >  0.745
+|   |   |   |   |   |   |   |   |--- class: 0
+|   |   |   |   |--- day_of_week >  0.750
+|   |   |   |   |   |--- class: 0
+|   |   |   |--- kitchen_light_current >  0.500
+|   |   |   |   |--- light_level <= 0.073
+|   |   |   |   |   |--- time_of_day <= 0.745
+|   |   |   |   |   |   |--- day_of_week <= 0.250
+|   |   |   |   |   |   |   |--- light_level <= 0.027
+|   |   |   |   |   |   |   |   |--- class: 1
+|   |   |   |   |   |   |   |--- light_level >  0.027
+|   |   |   |   |   |   |   |   |--- class: 0
+|   |   |   |   |   |   |--- day_of_week >  0.250
+|   |   |   |   |   |   |   |--- light_level <= 0.049
+|   |   |   |   |   |   |   |   |--- class: 1
+|   |   |   |   |   |   |   |--- light_level >  0.049
+|   |   |   |   |   |   |   |   |--- class: 1
+|   |   |   |   |   |--- time_of_day >  0.745
+|   |   |   |   |   |   |--- light_level <= 0.051
+|   |   |   |   |   |   |   |--- class: 1
+|   |   |   |   |   |   |--- light_level >  0.051
+|   |   |   |   |   |   |   |--- class: 1
+|   |   |   |   |--- light_level >  0.073
+|   |   |   |   |   |--- day_of_week <= 0.417
+|   |   |   |   |   |   |--- light_level <= 0.084
+|   |   |   |   |   |   |   |--- light_level <= 0.079
+|   |   |   |   |   |   |   |   |--- class: 0
+|   |   |   |   |   |   |   |--- light_level >  0.079
+|   |   |   |   |   |   |   |   |--- class: 0
+|   |   |   |   |   |   |--- light_level >  0.084
+|   |   |   |   |   |   |   |--- class: 0
+|   |   |   |   |   |--- day_of_week >  0.417
+|   |   |   |   |   |   |--- light_level <= 0.132
+|   |   |   |   |   |   |   |--- light_level <= 0.098
+|   |   |   |   |   |   |   |   |--- class: 1
+|   |   |   |   |   |   |   |--- light_level >  0.098
+|   |   |   |   |   |   |   |   |--- class: 1
+|   |   |   |   |   |   |--- light_level >  0.132
+|   |   |   |   |   |   |   |--- light_level <= 0.148
+|   |   |   |   |   |   |   |   |--- class: 0
+|   |   |   |   |   |   |   |--- light_level >  0.148
+|   |   |   |   |   |   |   |   |--- class: 0
+|   |   |--- time_of_day >  0.766
+|   |   |   |--- time_of_day <= 0.776
+|   |   |   |   |--- day_of_week <= 0.917
+|   |   |   |   |   |--- light_level <= 0.003
+|   |   |   |   |   |   |--- class: 0
+|   |   |   |   |   |--- light_level >  0.003
+|   |   |   |   |   |   |--- light_level <= 0.017
+|   |   |   |   |   |   |   |--- class: 0
+|   |   |   |   |   |   |--- light_level >  0.017
+|   |   |   |   |   |   |   |--- class: 0
+|   |   |   |   |--- day_of_week >  0.917
+|   |   |   |   |   |--- class: 0
+|   |   |   |--- time_of_day >  0.776
+|   |   |   |   |--- day_of_week <= 0.583
+|   |   |   |   |   |--- time_of_day <= 0.891
+|   |   |   |   |   |   |--- is_home <= 0.500
+|   |   |   |   |   |   |   |--- class: 0
+|   |   |   |   |   |   |--- is_home >  0.500
+|   |   |   |   |   |   |   |--- class: 1
+|   |   |   |   |   |--- time_of_day >  0.891
+|   |   |   |   |   |   |--- bedroom_light_current <= 0.500
+|   |   |   |   |   |   |   |--- light_level <= 0.010
+|   |   |   |   |   |   |   |   |--- class: 0
+|   |   |   |   |   |   |   |--- light_level >  0.010
+|   |   |   |   |   |   |   |   |--- class: 0
+|   |   |   |   |   |   |--- bedroom_light_current >  0.500
+|   |   |   |   |   |   |   |--- class: 0
+|   |   |   |   |--- day_of_week >  0.583
+|   |   |   |   |   |--- time_of_day <= 0.786
+|   |   |   |   |   |   |--- light_level <= 0.003
+|   |   |   |   |   |   |   |--- day_of_week <= 0.917
+|   |   |   |   |   |   |   |   |--- class: 0
+|   |   |   |   |   |   |   |--- day_of_week >  0.917
+|   |   |   |   |   |   |   |   |--- class: 0
+|   |   |   |   |   |   |--- light_level >  0.003
+|   |   |   |   |   |   |   |--- class: 0
+|   |   |   |   |   |--- time_of_day >  0.786
+|   |   |   |   |   |   |--- class: 0
+|--- smart_plug_tv_current >  0.500
+|   |--- bedroom_light_current <= 0.500
+|   |   |--- is_home <= 0.500
+|   |   |   |--- class: 0
+|   |   |--- is_home >  0.500
+|   |   |   |--- day_of_week <= 0.583
+|   |   |   |   |--- time_of_day <= 0.891
+|   |   |   |   |   |--- class: 1
+|   |   |   |   |--- time_of_day >  0.891
+|   |   |   |   |   |--- day_of_week <= 0.417
+|   |   |   |   |   |   |--- class: 1
+|   |   |   |   |   |--- day_of_week >  0.417
+|   |   |   |   |   |   |--- light_level <= 0.019
+|   |   |   |   |   |   |   |--- class: 1
+|   |   |   |   |   |   |--- light_level >  0.019
+|   |   |   |   |   |   |   |--- light_level <= 0.030
+|   |   |   |   |   |   |   |   |--- class: 0
+|   |   |   |   |   |   |   |--- light_level >  0.030
+|   |   |   |   |   |   |   |   |--- class: 1
+|   |   |   |--- day_of_week >  0.583
+|   |   |   |   |--- time_of_day <= 0.870
+|   |   |   |   |   |--- time_of_day <= 0.859
+|   |   |   |   |   |   |--- light_level <= 0.043
+|   |   |   |   |   |   |   |--- class: 1
+|   |   |   |   |   |   |--- light_level >  0.043
+|   |   |   |   |   |   |   |--- time_of_day <= 0.818
+|   |   |   |   |   |   |   |   |--- class: 1
+|   |   |   |   |   |   |   |--- time_of_day >  0.818
+|   |   |   |   |   |   |   |   |--- class: 1
+|   |   |   |   |   |--- time_of_day >  0.859
+|   |   |   |   |   |   |--- light_level <= 0.018
+|   |   |   |   |   |   |   |--- class: 1
+|   |   |   |   |   |   |--- light_level >  0.018
+|   |   |   |   |   |   |   |--- class: 0
+|   |   |   |   |--- time_of_day >  0.870
+|   |   |   |   |   |--- class: 0
+|   |--- bedroom_light_current >  0.500
+|   |   |--- day_of_week <= 0.083
+|   |   |   |--- light_level <= 0.003
+|   |   |   |   |--- time_of_day <= 0.932
+|   |   |   |   |   |--- class: 1
+|   |   |   |   |--- time_of_day >  0.932
+|   |   |   |   |   |--- class: 0
+|   |   |   |--- light_level >  0.003
+|   |   |   |   |--- class: 0
+|   |   |--- day_of_week >  0.083
+|   |   |   |--- class: 0
+
+
+Natural-language rules:
+If current TV plug state <= on / home and time of day <= 17:07 and time of day <= 16:52 and time of day <= 16:22 and day of week <= Saturday, then turn off smart_plug_tv. sample_count=1
+If current TV plug state <= on / home and time of day <= 17:07 and time of day <= 16:52 and time of day <= 16:22 and day of week > Saturday and current bedroom light state <= on / home, then turn off smart_plug_tv. sample_count=1
+If current TV plug state <= on / home and time of day <= 17:07 and time of day <= 16:52 and time of day <= 16:22 and day of week > Saturday and current bedroom light state > on / home and ambient light level <= 0.299, then turn off smart_plug_tv. sample_count=1
+If current TV plug state <= on / home and time of day <= 17:07 and time of day <= 16:52 and time of day <= 16:22 and day of week > Saturday and current bedroom light state > on / home and ambient light level > 0.299, then turn off smart_plug_tv. sample_count=1
+If current TV plug state <= on / home and time of day <= 17:07 and time of day <= 16:52 and time of day > 16:22 and ambient light level <= 0.154 and ambient light level <= 0.144, then turn off smart_plug_tv. sample_count=1
+If current TV plug state <= on / home and time of day <= 17:07 and time of day <= 16:52 and time of day > 16:22 and ambient light level <= 0.154 and ambient light level > 0.144, then turn off smart_plug_tv. sample_count=1
+If current TV plug state <= on / home and time of day <= 17:07 and time of day <= 16:52 and time of day > 16:22 and ambient light level > 0.154, then turn off smart_plug_tv. sample_count=1
+If current TV plug state <= on / home and time of day <= 17:07 and time of day > 16:52 and ambient light level <= 0.059, then turn off smart_plug_tv. sample_count=1
+If current TV plug state <= on / home and time of day <= 17:07 and time of day > 16:52 and ambient light level > 0.059 and current kitchen light state <= on / home, then turn off smart_plug_tv. sample_count=1
+If current TV plug state <= on / home and time of day <= 17:07 and time of day > 16:52 and ambient light level > 0.059 and current kitchen light state > on / home and ambient light level <= 0.148, then turn off smart_plug_tv. sample_count=1
+If current TV plug state <= on / home and time of day <= 17:07 and time of day > 16:52 and ambient light level > 0.059 and current kitchen light state > on / home and ambient light level > 0.148, then turn off smart_plug_tv. sample_count=1
+If current TV plug state <= on / home and time of day > 17:07 and time of day <= 18:22 and current kitchen light state <= on / home and day of week <= Friday and ambient light level <= 0.025 and occupancy state <= on / home, then turn off smart_plug_tv. sample_count=1
+If current TV plug state <= on / home and time of day > 17:07 and time of day <= 18:22 and current kitchen light state <= on / home and day of week <= Friday and ambient light level <= 0.025 and occupancy state > on / home and time of day <= 17:52, then turn on smart_plug_tv. sample_count=1
+If current TV plug state <= on / home and time of day > 17:07 and time of day <= 18:22 and current kitchen light state <= on / home and day of week <= Friday and ambient light level <= 0.025 and occupancy state > on / home and time of day > 17:52, then turn on smart_plug_tv. sample_count=1
+If current TV plug state <= on / home and time of day > 17:07 and time of day <= 18:22 and current kitchen light state <= on / home and day of week <= Friday and ambient light level > 0.025 and ambient light level <= 0.048 and ambient light level <= 0.041, then turn off smart_plug_tv. sample_count=1
+If current TV plug state <= on / home and time of day > 17:07 and time of day <= 18:22 and current kitchen light state <= on / home and day of week <= Friday and ambient light level > 0.025 and ambient light level <= 0.048 and ambient light level > 0.041, then turn off smart_plug_tv. sample_count=1
+If current TV plug state <= on / home and time of day > 17:07 and time of day <= 18:22 and current kitchen light state <= on / home and day of week <= Friday and ambient light level > 0.025 and ambient light level > 0.048 and time of day <= 17:52, then turn off smart_plug_tv. sample_count=1
+If current TV plug state <= on / home and time of day > 17:07 and time of day <= 18:22 and current kitchen light state <= on / home and day of week <= Friday and ambient light level > 0.025 and ambient light level > 0.048 and time of day > 17:52, then turn off smart_plug_tv. sample_count=1
+If current TV plug state <= on / home and time of day > 17:07 and time of day <= 18:22 and current kitchen light state <= on / home and day of week > Friday, then turn off smart_plug_tv. sample_count=1
+If current TV plug state <= on / home and time of day > 17:07 and time of day <= 18:22 and current kitchen light state > on / home and ambient light level <= 0.073 and time of day <= 17:52 and day of week <= Wednesday and ambient light level <= 0.027, then turn on smart_plug_tv. sample_count=1
+If current TV plug state <= on / home and time of day > 17:07 and time of day <= 18:22 and current kitchen light state > on / home and ambient light level <= 0.073 and time of day <= 17:52 and day of week <= Wednesday and ambient light level > 0.027, then turn off smart_plug_tv. sample_count=1
+If current TV plug state <= on / home and time of day > 17:07 and time of day <= 18:22 and current kitchen light state > on / home and ambient light level <= 0.073 and time of day <= 17:52 and day of week > Wednesday and ambient light level <= 0.049, then turn on smart_plug_tv. sample_count=1
+If current TV plug state <= on / home and time of day > 17:07 and time of day <= 18:22 and current kitchen light state > on / home and ambient light level <= 0.073 and time of day <= 17:52 and day of week > Wednesday and ambient light level > 0.049, then turn on smart_plug_tv. sample_count=1
+If current TV plug state <= on / home and time of day > 17:07 and time of day <= 18:22 and current kitchen light state > on / home and ambient light level <= 0.073 and time of day > 17:52 and ambient light level <= 0.051, then turn on smart_plug_tv. sample_count=1
+If current TV plug state <= on / home and time of day > 17:07 and time of day <= 18:22 and current kitchen light state > on / home and ambient light level <= 0.073 and time of day > 17:52 and ambient light level > 0.051, then turn on smart_plug_tv. sample_count=1
+If current TV plug state <= on / home and time of day > 17:07 and time of day <= 18:22 and current kitchen light state > on / home and ambient light level > 0.073 and day of week <= Thursday and ambient light level <= 0.084 and ambient light level <= 0.079, then turn off smart_plug_tv. sample_count=1
+If current TV plug state <= on / home and time of day > 17:07 and time of day <= 18:22 and current kitchen light state > on / home and ambient light level > 0.073 and day of week <= Thursday and ambient light level <= 0.084 and ambient light level > 0.079, then turn off smart_plug_tv. sample_count=1
+If current TV plug state <= on / home and time of day > 17:07 and time of day <= 18:22 and current kitchen light state > on / home and ambient light level > 0.073 and day of week <= Thursday and ambient light level > 0.084, then turn off smart_plug_tv. sample_count=1
+If current TV plug state <= on / home and time of day > 17:07 and time of day <= 18:22 and current kitchen light state > on / home and ambient light level > 0.073 and day of week > Thursday and ambient light level <= 0.132 and ambient light level <= 0.098, then turn on smart_plug_tv. sample_count=1
+If current TV plug state <= on / home and time of day > 17:07 and time of day <= 18:22 and current kitchen light state > on / home and ambient light level > 0.073 and day of week > Thursday and ambient light level <= 0.132 and ambient light level > 0.098, then turn on smart_plug_tv. sample_count=1
+If current TV plug state <= on / home and time of day > 17:07 and time of day <= 18:22 and current kitchen light state > on / home and ambient light level > 0.073 and day of week > Thursday and ambient light level > 0.132 and ambient light level <= 0.148, then turn off smart_plug_tv. sample_count=1
+If current TV plug state <= on / home and time of day > 17:07 and time of day <= 18:22 and current kitchen light state > on / home and ambient light level > 0.073 and day of week > Thursday and ambient light level > 0.132 and ambient light level > 0.148, then turn off smart_plug_tv. sample_count=1
+If current TV plug state <= on / home and time of day > 17:07 and time of day > 18:22 and time of day <= 18:37 and day of week <= Saturday and ambient light level <= 0.003, then turn off smart_plug_tv. sample_count=1
+If current TV plug state <= on / home and time of day > 17:07 and time of day > 18:22 and time of day <= 18:37 and day of week <= Saturday and ambient light level > 0.003 and ambient light level <= 0.017, then turn off smart_plug_tv. sample_count=1
+If current TV plug state <= on / home and time of day > 17:07 and time of day > 18:22 and time of day <= 18:37 and day of week <= Saturday and ambient light level > 0.003 and ambient light level > 0.017, then turn off smart_plug_tv. sample_count=1
+If current TV plug state <= on / home and time of day > 17:07 and time of day > 18:22 and time of day <= 18:37 and day of week > Saturday, then turn off smart_plug_tv. sample_count=1
+If current TV plug state <= on / home and time of day > 17:07 and time of day > 18:22 and time of day > 18:37 and day of week <= Friday and time of day <= 21:22 and occupancy state <= on / home, then turn off smart_plug_tv. sample_count=1
+If current TV plug state <= on / home and time of day > 17:07 and time of day > 18:22 and time of day > 18:37 and day of week <= Friday and time of day <= 21:22 and occupancy state > on / home, then turn on smart_plug_tv. sample_count=1
+If current TV plug state <= on / home and time of day > 17:07 and time of day > 18:22 and time of day > 18:37 and day of week <= Friday and time of day > 21:22 and current bedroom light state <= on / home and ambient light level <= 0.010, then turn off smart_plug_tv. sample_count=1
+If current TV plug state <= on / home and time of day > 17:07 and time of day > 18:22 and time of day > 18:37 and day of week <= Friday and time of day > 21:22 and current bedroom light state <= on / home and ambient light level > 0.010, then turn off smart_plug_tv. sample_count=1
+If current TV plug state <= on / home and time of day > 17:07 and time of day > 18:22 and time of day > 18:37 and day of week <= Friday and time of day > 21:22 and current bedroom light state > on / home, then turn off smart_plug_tv. sample_count=1
+If current TV plug state <= on / home and time of day > 17:07 and time of day > 18:22 and time of day > 18:37 and day of week > Friday and time of day <= 18:53 and ambient light level <= 0.003 and day of week <= Saturday, then turn off smart_plug_tv. sample_count=1
+If current TV plug state <= on / home and time of day > 17:07 and time of day > 18:22 and time of day > 18:37 and day of week > Friday and time of day <= 18:53 and ambient light level <= 0.003 and day of week > Saturday, then turn off smart_plug_tv. sample_count=1
+If current TV plug state <= on / home and time of day > 17:07 and time of day > 18:22 and time of day > 18:37 and day of week > Friday and time of day <= 18:53 and ambient light level > 0.003, then turn off smart_plug_tv. sample_count=1
+If current TV plug state <= on / home and time of day > 17:07 and time of day > 18:22 and time of day > 18:37 and day of week > Friday and time of day > 18:53, then turn off smart_plug_tv. sample_count=1
+If current TV plug state > on / home and current bedroom light state <= on / home and occupancy state <= on / home, then turn off smart_plug_tv. sample_count=1
+If current TV plug state > on / home and current bedroom light state <= on / home and occupancy state > on / home and day of week <= Friday and time of day <= 21:22, then turn on smart_plug_tv. sample_count=1
+If current TV plug state > on / home and current bedroom light state <= on / home and occupancy state > on / home and day of week <= Friday and time of day > 21:22 and day of week <= Thursday, then turn on smart_plug_tv. sample_count=1
+If current TV plug state > on / home and current bedroom light state <= on / home and occupancy state > on / home and day of week <= Friday and time of day > 21:22 and day of week > Thursday and ambient light level <= 0.019, then turn on smart_plug_tv. sample_count=1
+If current TV plug state > on / home and current bedroom light state <= on / home and occupancy state > on / home and day of week <= Friday and time of day > 21:22 and day of week > Thursday and ambient light level > 0.019 and ambient light level <= 0.030, then turn off smart_plug_tv. sample_count=1
+If current TV plug state > on / home and current bedroom light state <= on / home and occupancy state > on / home and day of week <= Friday and time of day > 21:22 and day of week > Thursday and ambient light level > 0.019 and ambient light level > 0.030, then turn on smart_plug_tv. sample_count=1
+If current TV plug state > on / home and current bedroom light state <= on / home and occupancy state > on / home and day of week > Friday and time of day <= 20:52 and time of day <= 20:38 and ambient light level <= 0.043, then turn on smart_plug_tv. sample_count=1
+If current TV plug state > on / home and current bedroom light state <= on / home and occupancy state > on / home and day of week > Friday and time of day <= 20:52 and time of day <= 20:38 and ambient light level > 0.043 and time of day <= 19:38, then turn on smart_plug_tv. sample_count=1
+If current TV plug state > on / home and current bedroom light state <= on / home and occupancy state > on / home and day of week > Friday and time of day <= 20:52 and time of day <= 20:38 and ambient light level > 0.043 and time of day > 19:38, then turn on smart_plug_tv. sample_count=1
+If current TV plug state > on / home and current bedroom light state <= on / home and occupancy state > on / home and day of week > Friday and time of day <= 20:52 and time of day > 20:38 and ambient light level <= 0.018, then turn on smart_plug_tv. sample_count=1
+If current TV plug state > on / home and current bedroom light state <= on / home and occupancy state > on / home and day of week > Friday and time of day <= 20:52 and time of day > 20:38 and ambient light level > 0.018, then turn off smart_plug_tv. sample_count=1
+If current TV plug state > on / home and current bedroom light state <= on / home and occupancy state > on / home and day of week > Friday and time of day > 20:52, then turn off smart_plug_tv. sample_count=1
+If current TV plug state > on / home and current bedroom light state > on / home and day of week <= Tuesday and ambient light level <= 0.003 and time of day <= 22:22, then turn on smart_plug_tv. sample_count=1
+If current TV plug state > on / home and current bedroom light state > on / home and day of week <= Tuesday and ambient light level <= 0.003 and time of day > 22:22, then turn off smart_plug_tv. sample_count=1
+If current TV plug state > on / home and current bedroom light state > on / home and day of week <= Tuesday and ambient light level > 0.003, then turn off smart_plug_tv. sample_count=1
+If current TV plug state > on / home and current bedroom light state > on / home and day of week > Tuesday, then turn off smart_plug_tv. sample_count=1
