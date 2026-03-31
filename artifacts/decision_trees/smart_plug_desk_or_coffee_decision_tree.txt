@@ -1,124 +1,25 @@
 Device: smart_plug_desk_or_coffee
-Training-set accuracy: 0.9978
+Training-set accuracy: 0.9949
 Positive rate in distilled labels: 0.0136
-Tree depth: 8
-Leaf count: 41
+Tree depth: 3
+Leaf count: 8
 
 Structured tree text:
 |--- smart_plug_desk_or_coffee_current <= 0.500
 |   |--- time_of_day <= 0.880
 |   |   |--- day_of_week <= 0.750
-|   |   |   |--- time_of_day <= 0.870
-|   |   |   |   |--- class: 0
-|   |   |   |--- time_of_day >  0.870
-|   |   |   |   |--- light_level <= 0.047
-|   |   |   |   |   |--- class: 0
-|   |   |   |   |--- light_level >  0.047
-|   |   |   |   |   |--- class: 0
+|   |   |   |--- class: 0
 |   |   |--- day_of_week >  0.750
-|   |   |   |--- light_level <= 0.350
-|   |   |   |   |--- light_level <= 0.290
-|   |   |   |   |   |--- light_level <= 0.099
-|   |   |   |   |   |   |--- class: 0
-|   |   |   |   |   |--- light_level >  0.099
-|   |   |   |   |   |   |--- light_level <= 0.101
-|   |   |   |   |   |   |   |--- class: 0
-|   |   |   |   |   |   |--- light_level >  0.101
-|   |   |   |   |   |   |   |--- class: 0
-|   |   |   |   |--- light_level >  0.290
-|   |   |   |   |   |--- light_level <= 0.295
-|   |   |   |   |   |   |--- class: 0
-|   |   |   |   |   |--- light_level >  0.295
-|   |   |   |   |   |   |--- time_of_day <= 0.682
-|   |   |   |   |   |   |   |--- class: 0
-|   |   |   |   |   |   |--- time_of_day >  0.682
-|   |   |   |   |   |   |   |--- light_level <= 0.311
-|   |   |   |   |   |   |   |   |--- class: 0
-|   |   |   |   |   |   |   |--- light_level >  0.311
-|   |   |   |   |   |   |   |   |--- class: 0
-|   |   |   |--- light_level >  0.350
-|   |   |   |   |--- kitchen_light_current <= 0.500
-|   |   |   |   |   |--- light_level <= 0.570
-|   |   |   |   |   |   |--- light_level <= 0.528
-|   |   |   |   |   |   |   |--- light_level <= 0.515
-|   |   |   |   |   |   |   |   |--- class: 0
-|   |   |   |   |   |   |   |--- light_level >  0.515
-|   |   |   |   |   |   |   |   |--- class: 0
-|   |   |   |   |   |   |--- light_level >  0.528
-|   |   |   |   |   |   |   |--- day_of_week <= 0.917
-|   |   |   |   |   |   |   |   |--- class: 1
-|   |   |   |   |   |   |   |--- day_of_week >  0.917
-|   |   |   |   |   |   |   |   |--- class: 0
-|   |   |   |   |   |--- light_level >  0.570
-|   |   |   |   |   |   |--- class: 0
-|   |   |   |   |--- kitchen_light_current >  0.500
-|   |   |   |   |   |--- day_of_week <= 0.917
-|   |   |   |   |   |   |--- light_level <= 0.369
-|   |   |   |   |   |   |   |--- class: 0
-|   |   |   |   |   |   |--- light_level >  0.369
-|   |   |   |   |   |   |   |--- light_level <= 0.380
-|   |   |   |   |   |   |   |   |--- class: 1
-|   |   |   |   |   |   |   |--- light_level >  0.380
-|   |   |   |   |   |   |   |   |--- class: 1
-|   |   |   |   |   |--- day_of_week >  0.917
-|   |   |   |   |   |   |--- class: 0
+|   |   |   |--- class: 0
 |   |--- time_of_day >  0.880
 |   |   |--- smart_plug_tv_current <= 0.500
-|   |   |   |--- time_of_day <= 0.911
-|   |   |   |   |--- day_of_week <= 0.417
-|   |   |   |   |   |--- class: 0
-|   |   |   |   |--- day_of_week >  0.417
-|   |   |   |   |   |--- class: 0
-|   |   |   |--- time_of_day >  0.911
-|   |   |   |   |--- class: 0
+|   |   |   |--- class: 0
 |   |   |--- smart_plug_tv_current >  0.500
-|   |   |   |--- day_of_week <= 0.250
-|   |   |   |   |--- class: 0
-|   |   |   |--- day_of_week >  0.250
-|   |   |   |   |--- day_of_week <= 0.417
-|   |   |   |   |   |--- living_room_light_current <= 0.500
-|   |   |   |   |   |   |--- class: 0
-|   |   |   |   |   |--- living_room_light_current >  0.500
-|   |   |   |   |   |   |--- time_of_day <= 0.901
-|   |   |   |   |   |   |   |--- light_level <= 0.005
-|   |   |   |   |   |   |   |   |--- class: 0
-|   |   |   |   |   |   |   |--- light_level >  0.005
-|   |   |   |   |   |   |   |   |--- class: 0
-|   |   |   |   |   |   |--- time_of_day >  0.901
-|   |   |   |   |   |   |   |--- class: 1
-|   |   |   |   |--- day_of_week >  0.417
-|   |   |   |   |   |--- light_level <= 0.039
-|   |   |   |   |   |   |--- class: 0
-|   |   |   |   |   |--- light_level >  0.039
-|   |   |   |   |   |   |--- class: 0
+|   |   |   |--- class: 0
 |--- smart_plug_desk_or_coffee_current >  0.500
 |   |--- light_level <= 0.682
 |   |   |--- time_of_day <= 0.922
-|   |   |   |--- time_of_day <= 0.599
-|   |   |   |   |--- light_level <= 0.661
-|   |   |   |   |   |--- light_level <= 0.405
-|   |   |   |   |   |   |--- class: 1
-|   |   |   |   |   |--- light_level >  0.405
-|   |   |   |   |   |   |--- class: 1
-|   |   |   |   |--- light_level >  0.661
-|   |   |   |   |   |--- light_level <= 0.672
-|   |   |   |   |   |   |--- class: 1
-|   |   |   |   |   |--- light_level >  0.672
-|   |   |   |   |   |   |--- class: 1
-|   |   |   |--- time_of_day >  0.599
-|   |   |   |   |--- light_level <= 0.029
-|   |   |   |   |   |--- time_of_day <= 0.911
-|   |   |   |   |   |   |--- class: 1
-|   |   |   |   |   |--- time_of_day >  0.911
-|   |   |   |   |   |   |--- light_level <= 0.001
-|   |   |   |   |   |   |   |--- class: 1
-|   |   |   |   |   |   |--- light_level >  0.001
-|   |   |   |   |   |   |   |--- class: 1
-|   |   |   |   |--- light_level >  0.029
-|   |   |   |   |   |--- light_level <= 0.366
-|   |   |   |   |   |   |--- class: 0
-|   |   |   |   |   |--- light_level >  0.366
-|   |   |   |   |   |   |--- class: 0
+|   |   |   |--- class: 1
 |   |   |--- time_of_day >  0.922
 |   |   |   |--- class: 0
 |   |--- light_level >  0.682
@@ -129,44 +30,11 @@ Structured tree text:
 
 
 Natural-language rules:
-If current desk or coffee plug state <= on / home and time of day <= 21:08 and day of week <= Friday and time of day <= 20:52, then turn off smart_plug_desk_or_coffee. sample_count=1
-If current desk or coffee plug state <= on / home and time of day <= 21:08 and day of week <= Friday and time of day > 20:52 and ambient light level <= 0.047, then turn off smart_plug_desk_or_coffee. sample_count=1
-If current desk or coffee plug state <= on / home and time of day <= 21:08 and day of week <= Friday and time of day > 20:52 and ambient light level > 0.047, then turn off smart_plug_desk_or_coffee. sample_count=1
-If current desk or coffee plug state <= on / home and time of day <= 21:08 and day of week > Friday and ambient light level <= 0.350 and ambient light level <= 0.290 and ambient light level <= 0.099, then turn off smart_plug_desk_or_coffee. sample_count=1
-If current desk or coffee plug state <= on / home and time of day <= 21:08 and day of week > Friday and ambient light level <= 0.350 and ambient light level <= 0.290 and ambient light level > 0.099 and ambient light level <= 0.101, then turn off smart_plug_desk_or_coffee. sample_count=1
-If current desk or coffee plug state <= on / home and time of day <= 21:08 and day of week > Friday and ambient light level <= 0.350 and ambient light level <= 0.290 and ambient light level > 0.099 and ambient light level > 0.101, then turn off smart_plug_desk_or_coffee. sample_count=1
-If current desk or coffee plug state <= on / home and time of day <= 21:08 and day of week > Friday and ambient light level <= 0.350 and ambient light level > 0.290 and ambient light level <= 0.295, then turn off smart_plug_desk_or_coffee. sample_count=1
-If current desk or coffee plug state <= on / home and time of day <= 21:08 and day of week > Friday and ambient light level <= 0.350 and ambient light level > 0.290 and ambient light level > 0.295 and time of day <= 16:22, then turn off smart_plug_desk_or_coffee. sample_count=1
-If current desk or coffee plug state <= on / home and time of day <= 21:08 and day of week > Friday and ambient light level <= 0.350 and ambient light level > 0.290 and ambient light level > 0.295 and time of day > 16:22 and ambient light level <= 0.311, then turn off smart_plug_desk_or_coffee. sample_count=1
-If current desk or coffee plug state <= on / home and time of day <= 21:08 and day of week > Friday and ambient light level <= 0.350 and ambient light level > 0.290 and ambient light level > 0.295 and time of day > 16:22 and ambient light level > 0.311, then turn off smart_plug_desk_or_coffee. sample_count=1
-If current desk or coffee plug state <= on / home and time of day <= 21:08 and day of week > Friday and ambient light level > 0.350 and current kitchen light state <= on / home and ambient light level <= 0.570 and ambient light level <= 0.528 and ambient light level <= 0.515, then turn off smart_plug_desk_or_coffee. sample_count=1
-If current desk or coffee plug state <= on / home and time of day <= 21:08 and day of week > Friday and ambient light level > 0.350 and current kitchen light state <= on / home and ambient light level <= 0.570 and ambient light level <= 0.528 and ambient light level > 0.515, then turn off smart_plug_desk_or_coffee. sample_count=1
-If current desk or coffee plug state <= on / home and time of day <= 21:08 and day of week > Friday and ambient light level > 0.350 and current kitchen light state <= on / home and ambient light level <= 0.570 and ambient light level > 0.528 and day of week <= Saturday, then turn on smart_plug_desk_or_coffee. sample_count=1
-If current desk or coffee plug state <= on / home and time of day <= 21:08 and day of week > Friday and ambient light level > 0.350 and current kitchen light state <= on / home and ambient light level <= 0.570 and ambient light level > 0.528 and day of week > Saturday, then turn off smart_plug_desk_or_coffee. sample_count=1
-If current desk or coffee plug state <= on / home and time of day <= 21:08 and day of week > Friday and ambient light level > 0.350 and current kitchen light state <= on / home and ambient light level > 0.570, then turn off smart_plug_desk_or_coffee. sample_count=1
-If current desk or coffee plug state <= on / home and time of day <= 21:08 and day of week > Friday and ambient light level > 0.350 and current kitchen light state > on / home and day of week <= Saturday and ambient light level <= 0.369, then turn off smart_plug_desk_or_coffee. sample_count=1
-If current desk or coffee plug state <= on / home and time of day <= 21:08 and day of week > Friday and ambient light level > 0.350 and current kitchen light state > on / home and day of week <= Saturday and ambient light level > 0.369 and ambient light level <= 0.380, then turn on smart_plug_desk_or_coffee. sample_count=1
-If current desk or coffee plug state <= on / home and time of day <= 21:08 and day of week > Friday and ambient light level > 0.350 and current kitchen light state > on / home and day of week <= Saturday and ambient light level > 0.369 and ambient light level > 0.380, then turn on smart_plug_desk_or_coffee. sample_count=1
-If current desk or coffee plug state <= on / home and time of day <= 21:08 and day of week > Friday and ambient light level > 0.350 and current kitchen light state > on / home and day of week > Saturday, then turn off smart_plug_desk_or_coffee. sample_count=1
-If current desk or coffee plug state <= on / home and time of day > 21:08 and current TV plug state <= on / home and time of day <= 21:53 and day of week <= Thursday, then turn off smart_plug_desk_or_coffee. sample_count=1
-If current desk or coffee plug state <= on / home and time of day > 21:08 and current TV plug state <= on / home and time of day <= 21:53 and day of week > Thursday, then turn off smart_plug_desk_or_coffee. sample_count=1
-If current desk or coffee plug state <= on / home and time of day > 21:08 and current TV plug state <= on / home and time of day > 21:53, then turn off smart_plug_desk_or_coffee. sample_count=1
-If current desk or coffee plug state <= on / home and time of day > 21:08 and current TV plug state > on / home and day of week <= Wednesday, then turn off smart_plug_desk_or_coffee. sample_count=1
-If current desk or coffee plug state <= on / home and time of day > 21:08 and current TV plug state > on / home and day of week > Wednesday and day of week <= Thursday and current living room light state <= on / home, then turn off smart_plug_desk_or_coffee. sample_count=1
-If current desk or coffee plug state <= on / home and time of day > 21:08 and current TV plug state > on / home and day of week > Wednesday and day of week <= Thursday and current living room light state > on / home and time of day <= 21:37 and ambient light level <= 0.005, then turn off smart_plug_desk_or_coffee. sample_count=1
-If current desk or coffee plug state <= on / home and time of day > 21:08 and current TV plug state > on / home and day of week > Wednesday and day of week <= Thursday and current living room light state > on / home and time of day <= 21:37 and ambient light level > 0.005, then turn off smart_plug_desk_or_coffee. sample_count=1
-If current desk or coffee plug state <= on / home and time of day > 21:08 and current TV plug state > on / home and day of week > Wednesday and day of week <= Thursday and current living room light state > on / home and time of day > 21:37, then turn on smart_plug_desk_or_coffee. sample_count=1
-If current desk or coffee plug state <= on / home and time of day > 21:08 and current TV plug state > on / home and day of week > Wednesday and day of week > Thursday and ambient light level <= 0.039, then turn off smart_plug_desk_or_coffee. sample_count=1
-If current desk or coffee plug state <= on / home and time of day > 21:08 and current TV plug state > on / home and day of week > Wednesday and day of week > Thursday and ambient light level > 0.039, then turn off smart_plug_desk_or_coffee. sample_count=1
-If current desk or coffee plug state > on / home and ambient light level <= 0.682 and time of day <= 22:08 and time of day <= 14:23 and ambient light level <= 0.661 and ambient light level <= 0.405, then turn on smart_plug_desk_or_coffee. sample_count=1
-If current desk or coffee plug state > on / home and ambient light level <= 0.682 and time of day <= 22:08 and time of day <= 14:23 and ambient light level <= 0.661 and ambient light level > 0.405, then turn on smart_plug_desk_or_coffee. sample_count=1
-If current desk or coffee plug state > on / home and ambient light level <= 0.682 and time of day <= 22:08 and time of day <= 14:23 and ambient light level > 0.661 and ambient light level <= 0.672, then turn on smart_plug_desk_or_coffee. sample_count=1
-If current desk or coffee plug state > on / home and ambient light level <= 0.682 and time of day <= 22:08 and time of day <= 14:23 and ambient light level > 0.661 and ambient light level > 0.672, then turn on smart_plug_desk_or_coffee. sample_count=1
-If current desk or coffee plug state > on / home and ambient light level <= 0.682 and time of day <= 22:08 and time of day > 14:23 and ambient light level <= 0.029 and time of day <= 21:53, then turn on smart_plug_desk_or_coffee. sample_count=1
-If current desk or coffee plug state > on / home and ambient light level <= 0.682 and time of day <= 22:08 and time of day > 14:23 and ambient light level <= 0.029 and time of day > 21:53 and ambient light level <= 0.001, then turn on smart_plug_desk_or_coffee. sample_count=1
-If current desk or coffee plug state > on / home and ambient light level <= 0.682 and time of day <= 22:08 and time of day > 14:23 and ambient light level <= 0.029 and time of day > 21:53 and ambient light level > 0.001, then turn on smart_plug_desk_or_coffee. sample_count=1
-If current desk or coffee plug state > on / home and ambient light level <= 0.682 and time of day <= 22:08 and time of day > 14:23 and ambient light level > 0.029 and ambient light level <= 0.366, then turn off smart_plug_desk_or_coffee. sample_count=1
-If current desk or coffee plug state > on / home and ambient light level <= 0.682 and time of day <= 22:08 and time of day > 14:23 and ambient light level > 0.029 and ambient light level > 0.366, then turn off smart_plug_desk_or_coffee. sample_count=1
+If current desk or coffee plug state <= on / home and time of day <= 21:08 and day of week <= Friday, then turn off smart_plug_desk_or_coffee. sample_count=1
+If current desk or coffee plug state <= on / home and time of day <= 21:08 and day of week > Friday, then turn off smart_plug_desk_or_coffee. sample_count=1
+If current desk or coffee plug state <= on / home and time of day > 21:08 and current TV plug state <= on / home, then turn off smart_plug_desk_or_coffee. sample_count=1
+If current desk or coffee plug state <= on / home and time of day > 21:08 and current TV plug state > on / home, then turn off smart_plug_desk_or_coffee. sample_count=1
+If current desk or coffee plug state > on / home and ambient light level <= 0.682 and time of day <= 22:08, then turn on smart_plug_desk_or_coffee. sample_count=1
 If current desk or coffee plug state > on / home and ambient light level <= 0.682 and time of day > 22:08, then turn off smart_plug_desk_or_coffee. sample_count=1
 If current desk or coffee plug state > on / home and ambient light level > 0.682 and ambient light level <= 0.700, then turn off smart_plug_desk_or_coffee. sample_count=1
 If current desk or coffee plug state > on / home and ambient light level > 0.682 and ambient light level > 0.700, then turn off smart_plug_desk_or_coffee. sample_count=1

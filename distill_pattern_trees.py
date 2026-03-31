@@ -163,13 +163,13 @@ def write_tree_report(
 
 def build_arg_parser() -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser(
-        description="Distill one max-depth-8 decision tree per device from the Pattern RL policy."
+        description="Distill one max-depth-3 decision tree per device from the Pattern RL policy."
     )
     parser.add_argument("--checkpoint", type=Path, default=Path("artifacts/pattern_dqn.pt"))
     parser.add_argument("--episodes", type=int, default=80)
     parser.add_argument("--seed", type=int, default=7)
     parser.add_argument("--device", type=str, default=None)
-    parser.add_argument("--max-depth", type=int, default=8)
+    parser.add_argument("--max-depth", type=int, default=3)
     parser.add_argument(
         "--output-dir",
         type=Path,
