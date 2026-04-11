@@ -1,40 +1,24 @@
 Device: smart_plug_tv
-Training-set accuracy: 0.9895
+Training-set accuracy: 0.9886
 Positive rate in distilled labels: 0.1185
-Tree depth: 3
-Leaf count: 8
+Tree depth: 2
+Leaf count: 4
 
 Structured tree text:
 |--- smart_plug_tv_current <= 0.500
 |   |--- time_of_day <= 0.714
-|   |   |--- time_of_day <= 0.703
-|   |   |   |--- class: 0
-|   |   |--- time_of_day >  0.703
-|   |   |   |--- class: 0
+|   |   |--- class: 0
 |   |--- time_of_day >  0.714
-|   |   |--- time_of_day <= 0.766
-|   |   |   |--- class: 0
-|   |   |--- time_of_day >  0.766
-|   |   |   |--- class: 0
+|   |   |--- class: 0
 |--- smart_plug_tv_current >  0.500
 |   |--- bedroom_light_current <= 0.500
-|   |   |--- is_home <= 0.500
-|   |   |   |--- class: 0
-|   |   |--- is_home >  0.500
-|   |   |   |--- class: 1
+|   |   |--- class: 1
 |   |--- bedroom_light_current >  0.500
-|   |   |--- day_of_week <= 0.083
-|   |   |   |--- class: 0
-|   |   |--- day_of_week >  0.083
-|   |   |   |--- class: 0
+|   |   |--- class: 0
 
 
 Natural-language rules:
-If current TV plug state <= on / home and time of day <= 17:07 and time of day <= 16:52, then turn off smart_plug_tv. sample_count=1
-If current TV plug state <= on / home and time of day <= 17:07 and time of day > 16:52, then turn off smart_plug_tv. sample_count=1
-If current TV plug state <= on / home and time of day > 17:07 and time of day <= 18:22, then turn off smart_plug_tv. sample_count=1
-If current TV plug state <= on / home and time of day > 17:07 and time of day > 18:22, then turn off smart_plug_tv. sample_count=1
-If current TV plug state > on / home and current bedroom light state <= on / home and occupancy state <= on / home, then turn off smart_plug_tv. sample_count=1
-If current TV plug state > on / home and current bedroom light state <= on / home and occupancy state > on / home, then turn on smart_plug_tv. sample_count=1
-If current TV plug state > on / home and current bedroom light state > on / home and day of week <= Tuesday, then turn off smart_plug_tv. sample_count=1
-If current TV plug state > on / home and current bedroom light state > on / home and day of week > Tuesday, then turn off smart_plug_tv. sample_count=1
+If current TV plug state <= on / home and time of day <= 17:07, then turn off smart_plug_tv. sample_count=1
+If current TV plug state <= on / home and time of day > 17:07, then turn off smart_plug_tv. sample_count=1
+If current TV plug state > on / home and current bedroom light state <= on / home, then turn on smart_plug_tv. sample_count=1
+If current TV plug state > on / home and current bedroom light state > on / home, then turn off smart_plug_tv. sample_count=1

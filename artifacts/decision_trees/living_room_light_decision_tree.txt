@@ -1,40 +1,24 @@
 Device: living_room_light
-Training-set accuracy: 0.9808
+Training-set accuracy: 0.9766
 Positive rate in distilled labels: 0.2087
-Tree depth: 3
-Leaf count: 8
+Tree depth: 2
+Leaf count: 4
 
 Structured tree text:
 |--- living_room_light_current <= 0.500
 |   |--- time_of_day <= 0.630
-|   |   |--- time_of_day <= 0.620
-|   |   |   |--- class: 0
-|   |   |--- time_of_day >  0.620
-|   |   |   |--- class: 0
+|   |   |--- class: 0
 |   |--- time_of_day >  0.630
-|   |   |--- kitchen_light_current <= 0.500
-|   |   |   |--- class: 0
-|   |   |--- kitchen_light_current >  0.500
-|   |   |   |--- class: 0
+|   |   |--- class: 0
 |--- living_room_light_current >  0.500
 |   |--- time_of_day <= 0.911
-|   |   |--- is_home <= 0.500
-|   |   |   |--- class: 0
-|   |   |--- is_home >  0.500
-|   |   |   |--- class: 1
+|   |   |--- class: 1
 |   |--- time_of_day >  0.911
-|   |   |--- day_of_week <= 0.750
-|   |   |   |--- class: 0
-|   |   |--- day_of_week >  0.750
-|   |   |   |--- class: 1
+|   |   |--- class: 1
 
 
 Natural-language rules:
-If current living room light state <= on / home and time of day <= 15:08 and time of day <= 14:52, then turn off living_room_light. sample_count=1
-If current living room light state <= on / home and time of day <= 15:08 and time of day > 14:52, then turn off living_room_light. sample_count=1
-If current living room light state <= on / home and time of day > 15:08 and current kitchen light state <= on / home, then turn off living_room_light. sample_count=1
-If current living room light state <= on / home and time of day > 15:08 and current kitchen light state > on / home, then turn off living_room_light. sample_count=1
-If current living room light state > on / home and time of day <= 21:53 and occupancy state <= on / home, then turn off living_room_light. sample_count=1
-If current living room light state > on / home and time of day <= 21:53 and occupancy state > on / home, then turn on living_room_light. sample_count=1
-If current living room light state > on / home and time of day > 21:53 and day of week <= Friday, then turn off living_room_light. sample_count=1
-If current living room light state > on / home and time of day > 21:53 and day of week > Friday, then turn on living_room_light. sample_count=1
+If current living room light state <= on / home and time of day <= 15:08, then turn off living_room_light. sample_count=1
+If current living room light state <= on / home and time of day > 15:08, then turn off living_room_light. sample_count=1
+If current living room light state > on / home and time of day <= 21:53, then turn on living_room_light. sample_count=1
+If current living room light state > on / home and time of day > 21:53, then turn on living_room_light. sample_count=1

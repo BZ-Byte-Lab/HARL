@@ -1,36 +1,24 @@
 Device: kitchen_light
-Training-set accuracy: 0.9706
+Training-set accuracy: 0.9667
 Positive rate in distilled labels: 0.2533
-Tree depth: 3
-Leaf count: 7
+Tree depth: 2
+Leaf count: 4
 
 Structured tree text:
 |--- kitchen_light_current <= 0.500
 |   |--- time_of_day <= 0.005
-|   |   |--- day_of_week <= 0.583
-|   |   |   |--- class: 0
-|   |   |--- day_of_week >  0.583
-|   |   |   |--- class: 1
+|   |   |--- class: 0
 |   |--- time_of_day >  0.005
-|   |   |--- light_level <= 0.364
-|   |   |   |--- class: 0
-|   |   |--- light_level >  0.364
-|   |   |   |--- class: 0
+|   |   |--- class: 0
 |--- kitchen_light_current >  0.500
 |   |--- is_home <= 0.500
 |   |   |--- class: 0
 |   |--- is_home >  0.500
-|   |   |--- time_of_day <= 0.766
-|   |   |   |--- class: 1
-|   |   |--- time_of_day >  0.766
-|   |   |   |--- class: 1
+|   |   |--- class: 1
 
 
 Natural-language rules:
-If current kitchen light state <= on / home and time of day <= 00:08 and day of week <= Friday, then turn off kitchen_light. sample_count=1
-If current kitchen light state <= on / home and time of day <= 00:08 and day of week > Friday, then turn on kitchen_light. sample_count=1
-If current kitchen light state <= on / home and time of day > 00:08 and ambient light level <= 0.364, then turn off kitchen_light. sample_count=1
-If current kitchen light state <= on / home and time of day > 00:08 and ambient light level > 0.364, then turn off kitchen_light. sample_count=1
+If current kitchen light state <= on / home and time of day <= 00:08, then turn off kitchen_light. sample_count=1
+If current kitchen light state <= on / home and time of day > 00:08, then turn off kitchen_light. sample_count=1
 If current kitchen light state > on / home and occupancy state <= on / home, then turn off kitchen_light. sample_count=1
-If current kitchen light state > on / home and occupancy state > on / home and time of day <= 18:22, then turn on kitchen_light. sample_count=1
-If current kitchen light state > on / home and occupancy state > on / home and time of day > 18:22, then turn on kitchen_light. sample_count=1
+If current kitchen light state > on / home and occupancy state > on / home, then turn on kitchen_light. sample_count=1

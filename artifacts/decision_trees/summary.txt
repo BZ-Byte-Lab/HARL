@@ -1,5 +1,5 @@
-device=living_room_light accuracy=0.9808 positive_rate=0.2087 depth=3 leaves=8
-device=bedroom_light accuracy=0.9783 positive_rate=0.2019 depth=3 leaves=7
-device=kitchen_light accuracy=0.9706 positive_rate=0.2533 depth=3 leaves=7
-device=smart_plug_tv accuracy=0.9895 positive_rate=0.1185 depth=3 leaves=8
-device=smart_plug_desk_or_coffee accuracy=0.9949 positive_rate=0.0136 depth=3 leaves=8
+device=living_room_light accuracy=0.9766 positive_rate=0.2087 depth=2 leaves=4
+device=bedroom_light accuracy=0.9734 positive_rate=0.2019 depth=2 leaves=4
+device=kitchen_light accuracy=0.9667 positive_rate=0.2533 depth=2 leaves=4
+device=smart_plug_tv accuracy=0.9886 positive_rate=0.1185 depth=2 leaves=4
+device=smart_plug_desk_or_coffee accuracy=0.9939 positive_rate=0.0136 depth=2 leaves=4

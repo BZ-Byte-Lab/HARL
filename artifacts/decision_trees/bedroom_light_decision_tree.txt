@@ -1,36 +1,24 @@
 Device: bedroom_light
-Training-set accuracy: 0.9783
+Training-set accuracy: 0.9734
 Positive rate in distilled labels: 0.2019
-Tree depth: 3
-Leaf count: 7
+Tree depth: 2
+Leaf count: 4
 
 Structured tree text:
 |--- bedroom_light_current <= 0.500
 |   |--- time_of_day <= 0.911
-|   |   |--- time_of_day <= 0.005
-|   |   |   |--- class: 1
-|   |   |--- time_of_day >  0.005
-|   |   |   |--- class: 0
+|   |   |--- class: 0
 |   |--- time_of_day >  0.911
-|   |   |--- day_of_week <= 0.750
-|   |   |   |--- class: 1
-|   |   |--- day_of_week >  0.750
-|   |   |   |--- class: 0
+|   |   |--- class: 0
 |--- bedroom_light_current >  0.500
 |   |--- is_home <= 0.500
 |   |   |--- class: 0
 |   |--- is_home >  0.500
-|   |   |--- time_of_day <= 0.005
-|   |   |   |--- class: 0
-|   |   |--- time_of_day >  0.005
-|   |   |   |--- class: 1
+|   |   |--- class: 1
 
 
 Natural-language rules:
-If current bedroom light state <= on / home and time of day <= 21:53 and time of day <= 00:08, then turn on bedroom_light. sample_count=1
-If current bedroom light state <= on / home and time of day <= 21:53 and time of day > 00:08, then turn off bedroom_light. sample_count=1
-If current bedroom light state <= on / home and time of day > 21:53 and day of week <= Friday, then turn on bedroom_light. sample_count=1
-If current bedroom light state <= on / home and time of day > 21:53 and day of week > Friday, then turn off bedroom_light. sample_count=1
+If current bedroom light state <= on / home and time of day <= 21:53, then turn off bedroom_light. sample_count=1
+If current bedroom light state <= on / home and time of day > 21:53, then turn off bedroom_light. sample_count=1
 If current bedroom light state > on / home and occupancy state <= on / home, then turn off bedroom_light. sample_count=1
-If current bedroom light state > on / home and occupancy state > on / home and time of day <= 00:08, then turn off bedroom_light. sample_count=1
-If current bedroom light state > on / home and occupancy state > on / home and time of day > 00:08, then turn on bedroom_light. sample_count=1
+If current bedroom light state > on / home and occupancy state > on / home, then turn on bedroom_light. sample_count=1
